@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Sonaris</title>
+  <desc id="desc">Sonaris music server logo</desc>
+  <defs>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ED3154"/>
+      <stop offset="0.52" stop-color="#AD153E"/>
+      <stop offset="1" stop-color="#F96267"/>
+    </linearGradient>
+    <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F4A797"/>
+      <stop offset="0.34" stop-color="#ED3154"/>
+      <stop offset="0.66" stop-color="#AD153E"/>
+      <stop offset="1" stop-color="#F9EDD8"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#050505"/>
+  <g fill="none" stroke="url(#ring)" stroke-width="18" stroke-linecap="round" filter="url(#glow)">
+    <path d="M106 274a150 150 0 0 1 260-104"/>
+    <path d="M389 192a150 150 0 0 1 17 82"/>
+    <path d="M406 319a150 150 0 0 1-115 86"/>
+    <path d="M220 410a150 150 0 0 1-114-91"/>
+  </g>
+  <g stroke-linecap="round" filter="url(#glow)">
+    <path d="M121 243v27" stroke="#F96267" stroke-width="18"/>
+    <path d="M154 216v80" stroke="#F9EDD8" stroke-width="18"/>
+    <path d="M190 190v132" stroke="#ED3154" stroke-width="18"/>
+    <path d="M226 246v71" stroke="#F4A797" stroke-width="18"/>
+    <path d="M364 190v132" stroke="#F9EDD8" stroke-width="18"/>
+    <path d="M400 216v80" stroke="#F96267" stroke-width="18"/>
+    <path d="M432 243v27" stroke="#F9EDD8" stroke-width="18"/>
+  </g>
+  <path d="M319 96c-15 2-33 12-54 26-36 25-65 50-80 73-17 25-13 50 10 71 16 15 39 27 62 38 39 19 63 36 68 60 4 19-2 38-20 61 33-18 55-43 61-73 8-39-10-68-40-94-21-18-49-31-72-44-24-13-31-29-22-48 9-18 29-37 54-54 17-12 35-23 53-32z" fill="url(#ribbon)" filter="url(#glow)"/>
+  <path d="M274 300v92" stroke="#ED3154" stroke-width="18" stroke-linecap="round" filter="url(#glow)"/>
+  <circle cx="239" cy="397" r="46" fill="url(#ribbon)" filter="url(#glow)"/>
+</svg>
