@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="resources/sonaris-logo-readme.svg" alt="Sonaris logo" width="220" />
+
 # Sonaris
 
 ### Your music. Your server. Your sound.
@@ -84,7 +86,20 @@ The Sonaris layer will progressively add:
 
 ## Design Language
 
-Sonaris uses a dark-first visual language built around the colors of the **Sonaris logo** rather than the green identity associated with Spotify.
+Sonaris uses a dark-first visual language built around the colors of the official Sonaris logo.
+
+### Initial logo-derived palette
+
+| Role | Color |
+| --- | --- |
+| Background | `#000000` |
+| Sonaris Pink | `#F8425A` |
+| Sonaris Coral | `#F97773` |
+| Sonaris Crimson | `#CE1F49` |
+| Sonaris Deep Red | `#8C1033` |
+| Sonaris Cream | `#F9EEDA` |
+
+These values are the initial design palette sampled from the current logo and may be fine-tuned when the full design system is implemented.
 
 The design system will use reusable tokens instead of hard-coded component colors:
 
@@ -104,18 +119,7 @@ The design system will use reusable tokens instead of hard-coded component color
 --sonaris-text-secondary;
 ```
 
-The intended visual direction combines:
-
-- near-black backgrounds
-- Sonaris logo colors for primary and accent actions
-- subtle gradients and glow effects
-- large album artwork
-- clean typography
-- soft elevated surfaces
-- smooth hover and playback transitions
-- responsive layouts from desktop to mobile
-
-The exact production color values will be locked to the official Sonaris logo assets during the branding milestone.
+The intended visual direction combines near-black backgrounds, coral/pink gradients, cream highlights, subtle glow, large album artwork, clean typography, soft elevated surfaces and smooth playback transitions.
 
 ---
 
@@ -250,8 +254,6 @@ The frontend architecture and component library may evolve as the Sonaris UI is 
 
 ### Requirements
 
-Install the following before working on Sonaris:
-
 - Go 1.27
 - Node.js 24
 - npm
@@ -280,39 +282,22 @@ make dev
 
 The development server uses port **4533** by default.
 
-Open:
-
 ```text
 http://localhost:4533
 ```
 
-### Run tests
+### Tests
 
 ```bash
 make test
-```
-
-Run frontend tests:
-
-```bash
 make test-js
-```
-
-Run the full test suite:
-
-```bash
 make testall
 ```
 
-### Lint
+### Lint and format
 
 ```bash
 make lintall
-```
-
-### Format
-
-```bash
 make format
 ```
 
@@ -515,7 +500,7 @@ The first stable Sonaris release is planned to include:
 - Sonaris design system
 - redesigned navigation
 - new player and queue
-- Spotify-style home experience
+- modern streaming-style home experience
 - Library 2.0
 - universal search
 - Liked Songs
@@ -549,8 +534,6 @@ The first stable Sonaris release is planned to include:
 
 **Goal:** Move playback between Sonaris devices and control one player from another.
 
-Planned capabilities:
-
 - active device list
 - transfer playback between devices
 - remote play / pause / next / seek
@@ -581,8 +564,6 @@ All social features should remain optional and configurable by administrators an
 ## 1.4 — Sonaris Rewind
 
 A yearly listening summary generated from local Sonaris history.
-
-Examples:
 
 - minutes listened
 - songs played
@@ -677,7 +658,7 @@ Planned areas:
 - Logs
 - Backups
 
-Dashboard examples:
+Dashboard example:
 
 ```text
 Library
@@ -748,8 +729,6 @@ A future Sonaris Plugin catalog may provide a safer and easier way to discover a
 
 Sonaris is a fork of Navidrome, and maintaining a healthy relationship with upstream is important to the project architecture.
 
-Development should keep upstream synchronization separate from Sonaris feature work where possible:
-
 ```text
 navidrome/navidrome
         |
@@ -763,6 +742,9 @@ Sonaris master
 ```
 
 Large internal renames should be avoided unless they create a clear product or technical benefit. This reduces merge conflicts and makes security fixes, codec improvements and server-side bug fixes easier to adopt.
+
+> [!IMPORTANT]
+> Active Sonaris development is performed on dedicated feature branches. The `master` branch is not modified as part of ongoing feature work unless explicitly approved.
 
 ---
 
@@ -779,8 +761,6 @@ When contributing:
 5. preserve OpenSubsonic compatibility unless a change is explicitly intended
 6. keep Sonaris-specific functionality clearly separated from inherited core behavior where practical
 
-Feature proposals and bug reports can be opened through GitHub Issues as the project infrastructure is established.
-
 ---
 
 ## License
@@ -789,7 +769,7 @@ Sonaris is licensed under the **GNU General Public License v3.0 (GPL-3.0)**. See
 
 Sonaris is based on [Navidrome](https://github.com/navidrome/navidrome), which is also licensed under GPL-3.0. Copyright and attribution for upstream Navidrome code remain with the respective Navidrome contributors.
 
-Sonaris is an independent project and is not affiliated with or endorsed by Spotify or Spotify AB. References to Spotify in project discussions describe general product/interaction inspiration only; Sonaris does not use Spotify branding or proprietary source code.
+Sonaris is an independent project and is not affiliated with or endorsed by Spotify or Spotify AB. References to commercial music services in project discussions describe general product/interaction inspiration only; Sonaris does not use their branding or proprietary source code.
 
 ---
 
