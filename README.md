@@ -1,89 +1,812 @@
-<a href="https://www.navidrome.org"><img src="resources/logo-192x192.png" alt="Navidrome logo" title="navidrome" align="right" height="60px" /></a>
+<div align="center">
 
-# Navidrome Music Server &nbsp;[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Tired%20of%20paying%20for%20music%20subscriptions%2C%20and%20not%20finding%20what%20you%20really%20like%3F%20Roll%20your%20own%20streaming%20service%21&url=https://navidrome.org&via=navidrome)
+# Sonaris
 
-[![Last Release](https://img.shields.io/github/v/release/navidrome/navidrome?logo=github&label=latest&style=flat-square)](https://github.com/navidrome/navidrome/releases)
-[![Build](https://img.shields.io/github/actions/workflow/status/navidrome/navidrome/pipeline.yml?branch=master&logo=github&style=flat-square)](https://nightly.link/navidrome/navidrome/workflows/pipeline/master)
-[![Downloads](https://img.shields.io/github/downloads/navidrome/navidrome/total?logo=github&style=flat-square)](https://github.com/navidrome/navidrome/releases/latest)
-[![Docker Pulls](https://img.shields.io/docker/pulls/deluan/navidrome?logo=docker&label=pulls&style=flat-square)](https://hub.docker.com/r/deluan/navidrome)
-[![Dev Chat](https://img.shields.io/discord/671335427726114836?logo=discord&label=discord&style=flat-square)](https://discord.gg/xh7j7yF)
-[![Subreddit](https://img.shields.io/reddit/subreddit-subscribers/navidrome?logo=reddit&label=/r/navidrome&style=flat-square)](https://www.reddit.com/r/navidrome/)
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0-ff69b4.svg?style=flat-square)](CODE_OF_CONDUCT.md)
-[![Gurubase](https://img.shields.io/badge/Gurubase-Ask%20Navidrome%20Guru-006BFF?style=flat-square)](https://gurubase.io/g/navidrome)
+### Your music. Your server. Your sound.
 
-Navidrome is an open source web-based music collection server and streamer. It gives you freedom to listen to your
-music collection from any browser or mobile device. It's like your personal Spotify!
+**A modern self-hosted music platform built on Navidrome, designed to bring a polished streaming experience to your own music library.**
 
+[![License](https://img.shields.io/badge/license-GPL--3.0-blue?style=flat-square)](LICENSE)
+[![Status](https://img.shields.io/badge/status-pre--alpha-orange?style=flat-square)](#project-status)
+[![Upstream](https://img.shields.io/badge/upstream-Navidrome-purple?style=flat-square)](https://github.com/navidrome/navidrome)
 
-**Note**: The `master` branch may be in an unstable or even broken state during development. 
-Please use [releases](https://github.com/navidrome/navidrome/releases) instead of 
-the `master` branch in order to get a stable set of binaries.
+</div>
 
-## [Check out our Live Demo!](https://www.navidrome.org/demo/)
+---
 
-__Any feedback is welcome!__ If you need/want a new feature, find a bug or think of any way to improve Navidrome, 
-please file a [GitHub issue](https://github.com/navidrome/navidrome/issues) or join the discussion in our 
-[Subreddit](https://www.reddit.com/r/navidrome/). If you want to contribute to the project in any other way 
-([ui/backend dev](https://www.navidrome.org/docs/developers/), 
-[translations](https://www.navidrome.org/docs/developers/translations/), 
-[themes](https://www.navidrome.org/docs/developers/creating-themes)), please join the chat in our 
-[Discord server](https://discord.gg/xh7j7yF). 
+## What is Sonaris?
 
-## Installation
+Sonaris is a self-hosted music server and streaming interface for people who want full control over their music library without giving up the polished experience of a modern commercial streaming service.
 
-See instructions on the [project's website](https://www.navidrome.org/docs/installation/)
+The project is based on [Navidrome](https://github.com/navidrome/navidrome) and keeps its proven music-server foundation while building a distinct Sonaris experience on top: a redesigned interface, a new player, discovery features, mixes, radio, richer library views, listening statistics, device handoff, social features and more.
 
-## Cloud Hosting
+Sonaris is intended to feel familiar to users of modern music streaming apps while remaining fully self-hosted and focused on music you own and control.
 
-[PikaPods](https://www.pikapods.com) has partnered with us to offer you an 
-[officially supported, cloud-hosted solution](https://www.navidrome.org/docs/installation/managed/#pikapods). 
-A share of the revenue helps fund the development of Navidrome at no additional cost for you.
+> [!IMPORTANT]
+> Sonaris is currently in **pre-alpha development**. The project is not yet intended to replace a stable Navidrome installation.
 
-[![PikaPods](https://www.pikapods.com/static/run-button.svg)](https://www.pikapods.com/pods?run=navidrome)
+---
 
-## Features
- 
- - Handles very **large music collections**
- - Streams virtually **any audio format** available
- - Reads and uses all your beautifully curated **metadata**
- - Great support for **compilations** (Various Artists albums) and **box sets** (multi-disc albums)
- - **Multi-user**, each user has their own play counts, playlists, favourites, etc...
- - Very **low resource usage**
- - **Multi-platform**, runs on macOS, Linux and Windows. **Docker** images are also provided
- - Ready to use binaries for all major platforms, including **Raspberry Pi**
- - Automatically **monitors your library** for changes, importing new files and reloading new metadata 
- - Supports **lyrics** from sidecar .ttml, .yaml/.yml Lyricsfile, .elrc, .lrc, .srt, .txt files and embedded TTML, Enhanced LRC, LRC, SRT, and plain-text tags (via `lyricspriority`)
- - **Themeable**, modern and responsive **Web interface** based on [Material UI](https://material-ui.com)
- - **Compatible** with all Subsonic/Madsonic/Airsonic [clients](https://www.navidrome.org/docs/overview/#apps)
- - **Transcoding** on the fly. Can be set per user/player. **Opus encoding is supported**
- - Translated to **various languages**
+## Vision
 
-## Translations
+Sonaris aims to become a complete personal music platform with four core principles:
 
-Navidrome uses [POEditor](https://poeditor.com/) for translations, and we are always looking 
-for [more contributors](https://www.navidrome.org/docs/developers/translations/)
+- **Beautiful by default** — a polished dark interface with a visual identity based on the Sonaris logo palette.
+- **Your library first** — your files, your metadata, your server and your listening history remain under your control.
+- **Modern discovery** — recommendations, mixes, radio and rediscovery features should make large personal libraries feel alive.
+- **Keep the strong foundation** — retain Navidrome's mature scanner, database, transcoding and OpenSubsonic compatibility wherever possible.
 
-<a href="https://poeditor.com/"> 
-<img height="32" src="https://github.com/user-attachments/assets/c19b1d2b-01e1-4682-a007-12356c42147c">
-</a>
+Sonaris takes interaction inspiration from leading music apps, but it is not intended to copy proprietary branding, assets or source code. Sonaris has its own visual language and identity.
 
-## Documentation
-All documentation can be found in the project's website: https://www.navidrome.org/docs. 
-Here are some useful direct links:
+---
 
-- [Overview](https://www.navidrome.org/docs/overview/)
-- [Installation](https://www.navidrome.org/docs/installation/)
-  - [Docker](https://www.navidrome.org/docs/installation/docker/)
-  - [Binaries](https://www.navidrome.org/docs/installation/pre-built-binaries/)
-  - [Build from source](https://www.navidrome.org/docs/installation/build-from-source/)
-- [Development](https://www.navidrome.org/docs/developers/)
-- [Subsonic API Compatibility](https://www.navidrome.org/docs/developers/subsonic-api/)
+## Project Status
 
-## Screenshots
+Sonaris is currently in the **foundation and rebranding stage**.
 
-<p align="left">
-    <img height="550" src="https://raw.githubusercontent.com/navidrome/navidrome/master/.github/screenshots/ss-mobile-login.png">
-    <img height="550" src="https://raw.githubusercontent.com/navidrome/navidrome/master/.github/screenshots/ss-mobile-player.png">
-    <img height="550" src="https://raw.githubusercontent.com/navidrome/navidrome/master/.github/screenshots/ss-mobile-album-view.png">
-    <img width="550" src="https://raw.githubusercontent.com/navidrome/navidrome/master/.github/screenshots/ss-desktop-player.png">
-</p>
+The immediate goal is to establish a clean Sonaris layer above the Navidrome core before larger product features are introduced. Internal Navidrome-compatible configuration, APIs and package structure will initially remain unchanged where changing them would provide little user benefit or create unnecessary upstream conflicts.
+
+### Current foundation
+
+Thanks to the Navidrome core, the project already has a strong technical base for:
+
+- large local music libraries
+- metadata scanning and library monitoring
+- multi-user accounts
+- playlists and favourites
+- playback history and play counts
+- many audio formats
+- on-the-fly transcoding
+- lyrics support
+- responsive web playback
+- OpenSubsonic / Subsonic-compatible clients
+- low-resource self-hosted operation
+
+### Sonaris-specific work
+
+The Sonaris layer will progressively add:
+
+- complete Sonaris branding
+- a new design system based on the Sonaris logo colors
+- redesigned navigation and home experience
+- a new persistent player and queue
+- richer album, artist and library pages
+- universal search
+- visual smart-playlist creation
+- personalized mixes and radio
+- listening insights and yearly Rewind
+- device handoff / Sonaris Connect
+- optional social features for multi-user servers
+- audio analysis and advanced discovery
+- dedicated desktop/mobile experiences
+
+---
+
+## Design Language
+
+Sonaris uses a dark-first visual language built around the colors of the **Sonaris logo** rather than the green identity associated with Spotify.
+
+The design system will use reusable tokens instead of hard-coded component colors:
+
+```css
+--sonaris-primary;
+--sonaris-primary-light;
+--sonaris-primary-dark;
+--sonaris-accent;
+--sonaris-accent-hover;
+
+--sonaris-background;
+--sonaris-surface;
+--sonaris-surface-raised;
+--sonaris-border;
+
+--sonaris-text;
+--sonaris-text-secondary;
+```
+
+The intended visual direction combines:
+
+- near-black backgrounds
+- Sonaris logo colors for primary and accent actions
+- subtle gradients and glow effects
+- large album artwork
+- clean typography
+- soft elevated surfaces
+- smooth hover and playback transitions
+- responsive layouts from desktop to mobile
+
+The exact production color values will be locked to the official Sonaris logo assets during the branding milestone.
+
+---
+
+## Planned Navigation
+
+```text
+SONARIS
+
+Home
+Search
+
+YOUR MUSIC
+Liked Songs
+Albums
+Artists
+Songs
+Genres
+
+DISCOVER
+Made for You
+Radio
+Discover
+
+YOUR LIBRARY
+Playlists
+History
+Downloads
+
+--------------------
+Now Playing / Queue
+```
+
+---
+
+## Player Experience
+
+The Sonaris player is planned as a permanent, first-class part of the interface rather than a secondary control strip.
+
+### Core playback
+
+- play / pause
+- previous / next
+- seek bar
+- volume and mute
+- shuffle
+- repeat queue / repeat track
+- queue management
+- favourite / like
+- track context menus
+- album and artist navigation
+- playback time and remaining time
+
+### Advanced playback
+
+- gapless playback
+- configurable crossfade
+- ReplayGain
+- per-player audio quality
+- direct-play / transcode status
+- lossless and Hi-Res information
+- output device selection
+- synchronized queue state
+
+A Sonaris-specific playback detail will be clear technical quality information, for example:
+
+```text
+FLAC · 24-bit · 96 kHz · Direct Play
+```
+
+or:
+
+```text
+FLAC → Opus · 192 kbps · Transcoding
+```
+
+---
+
+## Architecture
+
+The goal is to create a distinct product without needlessly replacing reliable parts of Navidrome.
+
+```text
+                 SONARIS
+
+        +-----------------------+
+        |     Sonaris Web UI    |
+        |  New UX and branding  |
+        +-----------------------+
+        |   Sonaris Features    |
+        | Mixes / Radio / Social|
+        +-----------------------+
+        |     Navidrome Core    |
+        | Scanner / DB / Users  |
+        +-----------------------+
+        | OpenSubsonic API      |
+        +-----------------------+
+        | FFmpeg / File Library |
+        +-----------------------+
+```
+
+### Compatibility strategy
+
+During the early releases Sonaris intentionally keeps compatibility-sensitive internals such as:
+
+- `ND_*` configuration variables
+- existing database structures unless migrations are required
+- OpenSubsonic / Subsonic API compatibility
+- internal Go module/package paths where renaming would create large upstream conflicts
+
+This lets Sonaris continue receiving useful upstream fixes while the visible product evolves independently.
+
+---
+
+## Technology Stack
+
+The current Sonaris fork uses:
+
+- **Go 1.27** for the server
+- **Node.js 24** for frontend tooling
+- **React** for the web interface
+- **Material UI** in the current inherited frontend
+- **Vite** for frontend development/build tooling
+- **SQLite** by default for application data
+- **FFmpeg** for transcoding and media processing
+- **OpenSubsonic / Subsonic APIs** for compatible clients
+
+The frontend architecture and component library may evolve as the Sonaris UI is rebuilt.
+
+---
+
+## Development Setup
+
+### Requirements
+
+Install the following before working on Sonaris:
+
+- Go 1.27
+- Node.js 24
+- npm
+- Make
+- Git
+- FFmpeg
+
+### Clone
+
+```bash
+git clone https://github.com/Homiiboy/Sonaris.git
+cd Sonaris
+```
+
+### Install development dependencies
+
+```bash
+make setup
+```
+
+### Start the development environment
+
+```bash
+make dev
+```
+
+The development server uses port **4533** by default.
+
+Open:
+
+```text
+http://localhost:4533
+```
+
+### Run tests
+
+```bash
+make test
+```
+
+Run frontend tests:
+
+```bash
+make test-js
+```
+
+Run the full test suite:
+
+```bash
+make testall
+```
+
+### Lint
+
+```bash
+make lintall
+```
+
+### Format
+
+```bash
+make format
+```
+
+> [!NOTE]
+> Production-ready Sonaris packages and Sonaris-branded Docker images are planned for a later milestone. Until then, this repository should be treated as a development source tree.
+
+---
+
+# Roadmap
+
+The roadmap is intentionally staged. User-facing foundations come first; recommendation, social and multi-device features follow after the core experience is stable.
+
+## 0.1 — Fork Foundation & Branding
+
+**Goal:** Establish Sonaris as a distinct project while preserving upstream compatibility.
+
+- replace visible Navidrome naming with Sonaris
+- Sonaris README and project documentation
+- browser title and metadata
+- PWA name and metadata
+- Sonaris favicon and app icons
+- login branding
+- loading / splash branding
+- keep GPL-3.0 licensing and upstream attribution
+- establish a clean upstream-sync workflow
+- avoid unnecessary API/config/database renames
+
+**Status:** In progress
+
+---
+
+## 0.2 — Sonaris Design System
+
+**Goal:** Remove the inherited Navidrome visual identity and define the permanent Sonaris style.
+
+- official Sonaris logo integration
+- exact logo-derived color palette
+- dark-first theme
+- Sonaris design tokens
+- typography scale
+- spacing and radius system
+- cards, buttons, menus and dialogs
+- hover, focus and active states
+- subtle gradient/glow language
+- responsive component standards
+- accessibility and keyboard-focus rules
+
+---
+
+## 0.3 — Sonaris Player
+
+**Goal:** Build a premium persistent playback experience.
+
+- redesigned bottom player
+- queue panel
+- artwork and track information
+- play / pause / seek / volume
+- shuffle and repeat
+- favourites
+- gapless playback
+- crossfade settings
+- ReplayGain controls
+- playback quality selector
+- Direct Play / Transcoding indicator
+- codec, bitrate, sample rate and bit-depth display
+- fullscreen Now Playing experience
+
+---
+
+## 0.4 — Home Experience
+
+**Goal:** Replace the traditional library landing page with a personalized streaming-style home.
+
+Planned sections include:
+
+- Good morning / afternoon / evening greeting
+- Recently Played
+- Jump Back In
+- Made for You
+- Recently Added
+- Favourite Albums
+- Heavy Rotation
+- Because You Listened To…
+- Rediscover
+- Popular in Your Library
+
+---
+
+## 0.5 — Library 2.0
+
+**Goal:** Make very large personal libraries fast and pleasant to browse.
+
+- Songs, Albums, Artists and Genres
+- grid / compact grid / list modes
+- richer artist pages
+- richer album pages
+- Liked Songs
+- sort by title, artist, album, year and date added
+- filter by format, quality and playback state
+- Recently Added / Recently Played
+- Never Played
+- Most Played
+- Lossless
+- Hi-Res
+
+---
+
+## 0.6 — Universal Search
+
+**Goal:** Make everything discoverable from one search surface.
+
+- instant search while typing
+- top result
+- songs
+- artists
+- albums
+- playlists
+- genres
+- fuzzy matching
+- keyboard navigation
+- recent searches
+- search suggestions
+- optional advanced filters
+
+---
+
+## 0.7 — Playlists & Smart Playlists
+
+**Goal:** Turn playlist management into a first-class Sonaris feature.
+
+- modern playlist editor
+- descriptions
+- custom playlist artwork
+- automatic 4-cover mosaic artwork
+- privacy / server visibility controls
+- drag-and-drop ordering
+- collaborative-ready data model
+- visual smart-playlist builder
+
+Example smart rule:
+
+```text
+Genre is Rock
+AND Rating >= 4
+AND Last Played > 30 days ago
+LIMIT 100 tracks
+```
+
+---
+
+## 0.8 — Sonaris Mix Engine
+
+**Goal:** Create useful personalized listening sessions from the user's own library.
+
+Initial recommendation signals:
+
+- play count
+- skip count
+- likes / favourites
+- ratings
+- listening time
+- artist affinity
+- album affinity
+- genre affinity
+- recently played tracks
+- playlist membership
+- time of day
+
+Planned mixes:
+
+- Daily Mix 1 / 2 / 3
+- Heavy Rotation
+- Rediscover
+- Forgotten Favourites
+- New to You
+- Morning Mix
+- Late Night Mix
+
+---
+
+## 0.9 — Radio
+
+**Goal:** Generate an endless queue around any part of the library.
+
+- Song Radio
+- Artist Radio
+- Album Radio
+- Playlist Radio
+- Genre Radio
+- dynamic queue generation
+- adjustable familiarity / discovery balance
+
+---
+
+## 1.0 — Sonaris Stable
+
+The first stable Sonaris release is planned to include:
+
+- complete Sonaris branding
+- Sonaris design system
+- redesigned navigation
+- new player and queue
+- Spotify-style home experience
+- Library 2.0
+- universal search
+- Liked Songs
+- playlist editor
+- Smart Playlist UI
+- Recently Played
+- playback history
+- personalized mixes
+- radio
+- lyrics
+- sharing
+- multi-user support
+- OpenSubsonic compatibility
+- transcoding
+- responsive mobile web UI
+
+---
+
+## 1.1 — Lyrics Experience
+
+- fullscreen lyrics
+- synchronized lyrics
+- automatic scrolling
+- current-line emphasis
+- embedded and sidecar lyric support
+- player-integrated lyrics panel
+
+---
+
+## 1.2 — Sonaris Connect
+
+**Goal:** Move playback between Sonaris devices and control one player from another.
+
+Planned capabilities:
+
+- active device list
+- transfer playback between devices
+- remote play / pause / next / seek
+- synchronized queue state
+- browser-to-browser handoff
+- desktop and mobile handoff
+- Jukebox integration where appropriate
+- WebSocket-based session synchronization
+
+---
+
+## 1.3 — Social & Collaborative Features
+
+Optional server-local social functionality for families and trusted multi-user installations.
+
+- user profiles
+- public/server-visible playlists
+- collaborative playlists
+- optional Friend Activity
+- recently played visibility controls
+- favourite artists/albums on profiles
+- granular privacy settings
+
+All social features should remain optional and configurable by administrators and users.
+
+---
+
+## 1.4 — Sonaris Rewind
+
+A yearly listening summary generated from local Sonaris history.
+
+Examples:
+
+- minutes listened
+- songs played
+- top tracks
+- top artists
+- top albums
+- top genres
+- longest listening sessions
+- discovery statistics
+- shareable visual story cards
+
+---
+
+## 1.5 — Audio Intelligence
+
+Optional local analysis to improve discovery beyond metadata tags.
+
+Potential analysis values:
+
+- BPM / tempo
+- musical key
+- loudness
+- dynamics
+- energy approximation
+- spectral characteristics
+- acoustic/electronic characteristics
+
+These values can later power mood and activity mixes without sending the music library to a third-party service.
+
+---
+
+## 1.6 — Discover
+
+**Goal:** Help users rediscover music already stored on their server.
+
+- Discover Mix
+- songs never played
+- albums rarely played
+- forgotten artists
+- hidden gems
+- newly added music
+- recommendations based on listening patterns
+- daily Forgotten Album
+- adjustable exploration strength
+
+---
+
+## 2.0 — Desktop & Mobile Experience
+
+- highly polished PWA
+- Windows desktop client
+- macOS desktop client
+- Linux desktop client
+- native or near-native mobile strategy
+- shared Sonaris design system
+- media-key and OS integration
+- notifications and background playback where supported
+
+---
+
+## 2.1 — Offline Music
+
+For dedicated Sonaris clients:
+
+- download tracks
+- download albums
+- download playlists
+- selectable offline quality
+- Original / High / Normal / Data Saver presets
+- automatic playlist resync
+- offline metadata and artwork
+- storage management
+
+---
+
+## 2.2 — Admin Center 2.0
+
+A HomeLab-focused administration experience.
+
+Planned areas:
+
+- Overview
+- Users
+- Libraries
+- Active Players
+- Sessions
+- Transcoding
+- Storage
+- Activity
+- Plugins
+- System
+- Logs
+- Backups
+
+Dashboard examples:
+
+```text
+Library
+48,221 Tracks
+3,812 Albums
+1,204 Artists
+
+Storage
+512 GB
+
+Listening Today
+14h 21m
+
+Active Users
+3
+```
+
+---
+
+## 2.3 — Sonaris Plugin Ecosystem
+
+Build on the underlying plugin capabilities while introducing a Sonaris-focused management experience.
+
+Potential integrations include:
+
+- metadata providers
+- MusicBrainz tools
+- ListenBrainz
+- Last.fm
+- lyrics providers
+- Discord Rich Presence
+- audio analyzers
+- scheduled maintenance tools
+- recommendation extensions
+
+A future Sonaris Plugin catalog may provide a safer and easier way to discover and manage compatible extensions.
+
+---
+
+## Release Overview
+
+| Version | Focus | Priority |
+| --- | --- | --- |
+| 0.1 | Fork foundation & branding | Critical |
+| 0.2 | Sonaris design system | Critical |
+| 0.3 | New player | Critical |
+| 0.4 | Home experience | Critical |
+| 0.5 | Library 2.0 | Critical |
+| 0.6 | Universal search | Critical |
+| 0.7 | Playlists & Smart Playlist UI | Critical |
+| 0.8 | Mix Engine | High |
+| 0.9 | Radio | High |
+| 1.0 | First stable Sonaris release | Milestone |
+| 1.1 | Lyrics experience | High |
+| 1.2 | Sonaris Connect | High |
+| 1.3 | Social / Collaborative | Medium |
+| 1.4 | Sonaris Rewind | Medium |
+| 1.5 | Audio Intelligence | Medium |
+| 1.6 | Discover | Medium |
+| 2.0 | Desktop / Mobile | Long term |
+| 2.1 | Offline Sync | Long term |
+| 2.2 | Admin Center 2.0 | Long term |
+| 2.3 | Plugin Ecosystem | Long term |
+
+---
+
+## Upstream Strategy
+
+Sonaris is a fork of Navidrome, and maintaining a healthy relationship with upstream is important to the project architecture.
+
+Development should keep upstream synchronization separate from Sonaris feature work where possible:
+
+```text
+navidrome/navidrome
+        |
+        v
+  upstream-sync
+        |
+        v
+Sonaris master
+        |
+        +--> feature branches
+```
+
+Large internal renames should be avoided unless they create a clear product or technical benefit. This reduces merge conflicts and makes security fixes, codec improvements and server-side bug fixes easier to adopt.
+
+---
+
+## Contributing
+
+Sonaris is still early in development, so architecture and conventions may change rapidly.
+
+When contributing:
+
+1. keep changes focused
+2. avoid unrelated upstream refactors
+3. add or update tests where appropriate
+4. run formatting and lint checks
+5. preserve OpenSubsonic compatibility unless a change is explicitly intended
+6. keep Sonaris-specific functionality clearly separated from inherited core behavior where practical
+
+Feature proposals and bug reports can be opened through GitHub Issues as the project infrastructure is established.
+
+---
+
+## License
+
+Sonaris is licensed under the **GNU General Public License v3.0 (GPL-3.0)**. See [`LICENSE`](LICENSE) for the full license text.
+
+Sonaris is based on [Navidrome](https://github.com/navidrome/navidrome), which is also licensed under GPL-3.0. Copyright and attribution for upstream Navidrome code remain with the respective Navidrome contributors.
+
+Sonaris is an independent project and is not affiliated with or endorsed by Spotify or Spotify AB. References to Spotify in project discussions describe general product/interaction inspiration only; Sonaris does not use Spotify branding or proprietary source code.
+
+---
+
+## Acknowledgements
+
+Sonaris exists because of the work of the Navidrome project and its contributors, as well as the wider open-source music and OpenSubsonic ecosystem.
+
+- [Navidrome](https://github.com/navidrome/navidrome)
+- [OpenSubsonic](https://opensubsonic.netlify.app/)
+- [FFmpeg](https://ffmpeg.org/)
+
+---
+
+<div align="center">
+
+### Sonaris
+
+**Own the library. Enjoy the experience.**
+
+</div>
